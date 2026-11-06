@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 1.5rem 0;
+}
+
+main .app-container {
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+main .cards-container .movie-card {
+    border: 2px solid black;
+    height: 300px;
+    width: 250px;
+    padding: .7rem
+}
+
+main .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1.5rem;
+    margin: 0 auto;
+}
