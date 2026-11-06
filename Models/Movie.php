@@ -13,6 +13,11 @@
             $this->director = $_director;
             $this->imglink = $_imglink;
         }
+
+        function getMovieTitle() {
+            return 
+                $this->title;
+        }
     };
 
 ?>

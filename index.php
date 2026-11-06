@@ -20,10 +20,10 @@
             <div class="cards-container">
             
             <div class="movie-card">
-                <h3>Titolo Film</h3>
-                <div>Immagine film</div>
-                <p>Director</p>
-                <p>Anno</p>
+                <h3><?php echo $movies[0]->getMovieTitle();?></h3>
+                <img class="movie-poster" src=<?php echo $movies[0]->imglink?> alt=<?php echo $movies[0]->title?> />
+                <p><?php echo $movies[0]->director?></p>
+                <p><?php echo $movies[0]->year?></p>
             </div>
 
             <div class="movie-card">
