@@ -25,7 +25,14 @@
                     <div class="movie-card">
                         <h3><?php echo $movie->getMovieTitle();?></h3>
                         <img class="movie-poster" src=<?php echo $movie->imglink?> alt=<?php echo $movie->title?> />
-                        <p><b>Genere:</b> <?php echo $movie->genre->genre ?> </p>
+                        <p><b>Generi:</b> 
+                        
+                            <?php foreach($movie->genres as $genreObj)
+                            {
+                                echo $genreObj->genre . " ";
+                            }
+                            ?> </p>
+                        
                         <p><?php echo $movie->director?></p>
                         <p><?php echo $movie->year?></p>
                     </div>
