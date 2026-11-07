@@ -19,33 +19,19 @@
 
             <div class="cards-container">
             
-            <div class="movie-card">
-                <h3><?php echo $movies[0]->getMovieTitle();?></h3>
-                <img class="movie-poster" src=<?php echo $movies[0]->imglink?> alt=<?php echo $movies[0]->title?> />
-                <p><?php echo $movies[0]->director?></p>
-                <p><?php echo $movies[0]->year?></p>
-            </div>
-
-            <div class="movie-card">
-                <h3>Titolo Film</h3>
-                <div>Immagine film</div>
-                <p>Director</p>
-                <p>Anno</p>
-            </div>
-
-            <div class="movie-card">
-                <h3>Titolo Film</h3>
-                <div>Immagine film</div>
-                <p>Director</p>
-                <p>Anno</p>
-            </div>
-
-            <div class="movie-card">
-                <h3>Titolo Film</h3>
-                <div>Immagine film</div>
-                <p>Director</p>
-                <p>Anno</p>
-            </div>
+                <?php
+                    foreach ($movies as $movie) {
+                ?>
+                    <div class="movie-card">
+                        <h3><?php echo $movie->getMovieTitle();?></h3>
+                        <img class="movie-poster" src=<?php echo $movie->imglink?> alt=<?php echo $movie->title?> />
+                        <p><b>Genere:</b> <?php echo $movie->genre->genre ?> </p>
+                        <p><?php echo $movie->director?></p>
+                        <p><?php echo $movie->year?></p>
+                    </div>
+                <?php
+                }
+                ?>
 
             </div>
 
