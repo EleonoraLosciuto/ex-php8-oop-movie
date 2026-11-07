@@ -26,22 +26,17 @@
                         <h3><?php echo $movie->getMovieTitle();?></h3>
                         <img class="movie-poster" src=<?php echo $movie->imglink?> alt=<?php echo $movie->title?> />
                         <p><b>Generi:</b> 
-                        
                             <?php 
-                            
-                                $genres_length = count($movie->genres);
-                                
+                                $genres_length = count($movie->genres);               
                                 foreach($movie->genres as $index => $genreObj){
-
                                     echo $genreObj->genre;
-                                    
                                     if ($index < $genres_length - 1) {
                                         echo ", ";
                                     }
                                 }
-                            ?> 
+                            ?>
                         </p>
-                        
+                        <?php if ($movie->getDuration()) { echo "<p>". $movie->getDuration() ."</p>"; } ?>
                         <p><?php echo $movie->director?></p>
                         <p><?php echo $movie->year?></p>
                     </div>

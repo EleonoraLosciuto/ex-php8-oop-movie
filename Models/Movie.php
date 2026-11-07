@@ -7,6 +7,8 @@
         public $imglink;
         public $genres;
 
+        use HasDuration;
+
 
         function __construct($_title, $_year, $_director, $_imglink, array $_genres) {
             $this->title = $_title;
