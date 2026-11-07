@@ -27,11 +27,20 @@
                         <img class="movie-poster" src=<?php echo $movie->imglink?> alt=<?php echo $movie->title?> />
                         <p><b>Generi:</b> 
                         
-                            <?php foreach($movie->genres as $genreObj)
-                            {
-                                echo $genreObj->genre . " ";
-                            }
-                            ?> </p>
+                            <?php 
+                            
+                                $genres_length = count($movie->genres);
+                                
+                                foreach($movie->genres as $index => $genreObj){
+
+                                    echo $genreObj->genre;
+                                    
+                                    if ($index < $genres_length - 1) {
+                                        echo ", ";
+                                    }
+                                }
+                            ?> 
+                        </p>
                         
                         <p><?php echo $movie->director?></p>
                         <p><?php echo $movie->year?></p>
